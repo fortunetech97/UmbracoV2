@@ -1,0 +1,426 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+	Layout = null;
+}
+
+@* the fun starts here *@
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="@Url.Content("~/css/umbraco-starterkit-style.css")" />
+    
+    <link rel="stylesheet" href="~/LoginPage/style.css" />
+    
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/plugins/bootstrap/bootstrap.min.css">
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="~/plugins/slick/slick.css">
+    <link rel="stylesheet" href="~/plugins/slick/slick-theme.css">
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="~/plugins/fancybox/jquery.fancybox.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="~/plugins/fontawesome/css/all.min.css">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="~/plugins/animation/animate.min.css">
+    <!-- jquery-ui -->
+    <link rel="stylesheet" href="~/plugins/jquery-ui/jquery-ui.css">
+    <!-- timePicker -->
+    <link rel="stylesheet" href="~/plugins/timePicker/timePicker.css">
+
+    <!-- Stylesheets -->
+
+    
+    <link rel="icon" href="~/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="~/images/favicon.png" type="image/x-icon">
+    
+    
+</head>
+	
+<body>
+    <div class="page-wrapper">
+
+
+
+        <!--header top-->
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                   
+                    <div class="col-md-12">
+                        <div class="top-right text-center text-md-right">
+                            <ul class="social-links">
+                                <li>
+                                    <a href="https://themefisher.com/" aria-label="facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://themefisher.com/" aria-label="twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://themefisher.com/" aria-label="google-plus">
+                                        <i class="fab fa-google-plus-g"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://themefisher.com/" aria-label="instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://themefisher.com/" aria-label="pinterest">
+                                        <i class="fab fa-pinterest-p"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--header top-->
+        <!--Header Upper-->
+        <section class="header-uper">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-3 col-lg-3">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img loading="lazy" class="img-fluid" src="~/images/logo.png" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-9">
+                        <marquee>MyHealth provides free confidential sexual health services to young people under 25</marquee>
+                        <P>CORONAVIRUS: VIEW LATEST ADVISE AND SERVICE UPDATES</P>
+                    </div>
+                    <div class="col-xl-3 col-lg-9">
+                        @Html.Partial("Login Status")
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Header Upper-->
+        <!--Main Header-->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarLinks">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Appointment</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Sign In</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown @("@blogs")">
+
+                            <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About MyHealthNet</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Strategic Plan</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Our Board</a></li>
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Press / Median</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Opportunities</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Campaigns</a></li>
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Press / Median</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Partners and Recognition</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown @("@blogs")">
+
+                            <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Sexual Health</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">STIs</a></li>
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Appointment</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Contraception</a></li>
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Pregnancy</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Psychosexual</a></li>
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Contact Tracing</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Help & Advice</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Mock Clinic</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown @("@blogs")">
+
+                            <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ask the Expert</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">F.A.Q</a></li>
+                                <li><a class="dropdown-item @("@blog")" href="blog-details.html">Health & Wellness</a></li>
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Growing Up</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Youth-Led Events</a></li>
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Resources</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Relationships</a></li>
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Service Request</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown @("@blogs")">
+
+                            <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Event</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Outreach Health</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Health Workshop</a></li>
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Hygiene Promotion</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Competitions</a></li>
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Outreach Health</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Galleries Videos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown @("@blogs")">
+
+                            <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Training</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Seminars Workshop</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Research Survey</a></li>
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Skills Progress</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Health Education</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown @("@blogs")">
+                            <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Get Involve</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Corporate Volunteering</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Work Experience</a></li>
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Fundraising</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Open Days</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Download Forms</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown @("@blogs")">
+                            <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Donate</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Appointment</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Sign In</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown @("@blogs")">
+                            <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Appointment</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Sign In</a></li>
+
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item dropdown @("@blogs")">
+                            <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bookings</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item @("@blog")" href="blog.html">Appointment</a></li>
+                                <li><a class="dropdown-item @("@blogDetails")" href="blog-details.html">Sign In</a></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--End Main Header -->
+        
+      
+        <br />
+        <div class="tabs mb-5">
+            <ul class="nav nav-tabs justify-content-center" id="aboutTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="dormitory-tab" data-toggle="tab" href="#dormitory" role="tab" aria-controls="dormitory" aria-selected="true">Worried About Your Safety?</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="orthopedic-tab" data-toggle="tab" href="#orthopedic" role="tab" aria-controls="orthopedic" aria-selected="false">Pregnancy Test</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="sonogram-tab" data-toggle="tab" href="#sonogram" role="tab" aria-controls="sonogram" aria-selected="false">STI/Non STI Testing</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="x-ray-tab" data-toggle="tab" href="#x-ray" role="tab" aria-controls="x-ray" aria-selected="false">Contraception Advice</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="diagnostic-tab" data-toggle="tab" href="#diagnostic" role="tab" aria-controls="diagnostic" aria-selected="false">Breast Awareness</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="diagnostic-tab" data-toggle="tab" href="#diagnostic" role="tab" aria-controls="diagnostic" aria-selected="false">Covid-19 Health & Safety Image</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="diagnostic-tab" data-toggle="tab" href="#diagnostic" role="tab" aria-controls="diagnostic" aria-selected="false">confidential Service</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+        
+        
+        
+        @RenderBody() 
+        
+         <footer class="footer-main">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <div class="about-widget">
+                                <div class="footer-logo">
+                                    <figure>
+                                        <a href="index.html">
+                                            <img loading="lazy" class="img-fluid" src="~/images/logo.png" alt="medic">
+                                        </a>
+                                    </figure>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, temporibus?</p>
+                                <ul class="location-link">
+                                    <li class="item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <p>Modamba, NY 80021, United States</p>
+                                    </li>
+                                    <li class="item">
+                                        <i class="far fa-envelope" aria-hidden="true"></i>
+                                        <a href="mailto:support@medic.com">
+                                            <p>support@medic.com</p>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <i class="fas fa-phone" aria-hidden="true"></i>
+                                        <p>(88017) +123 4567</p>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline social-icons">
+                                    <li class="list-inline-item"><a href="https://facebook.com/themefisher" aria-label="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://twitter.com/themefisher" aria-label="twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://instagram.com/themefisher" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://github.com/themefisher" aria-label="github"><i class="fab fa-github"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-5 mb-3 mb-md-0">
+                            <h2>Services</h2>
+                            <ul class="menu-link">
+                                <li>
+                                    <a href="service.html">
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>Donate Goods / Service
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service.html">
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>Share Projects Ideas
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service.html">
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>Our Partners
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service.html">
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>Start a Campaign
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service.html">
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>Internship
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-5 mb-3 mb-md-0">
+
+                            <ul class="menu-link">
+                                <li>
+                                    <a href="service.html">
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>Give Feedback
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service.html">
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>Corporate Volunteers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service.html">
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>Collaborators & Partners
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service.html">
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>Social Work Life Skills Placements
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service.html">
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>Remove user Block / unblock user
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service.html">
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>Health Drama Club
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container clearfix">
+                    <div class="copyright-text">
+                        <p>&copy; Copyright 2021. Designed &amp; Developed by <a href="https://">Fortunetech</a></p>
+                    </div>
+                    <ul class="footer-bottom-link">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="~/plugins/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="~/plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="~/plugins/slick/slick.min.js"></script>
+    <script src="~/plugins/slick/slick-animation.min.js"></script>
+    <!-- FancyBox -->
+    <script src="~/plugins/fancybox/jquery.fancybox.min.js" defer></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+    <script src="~/plugins/google-map/gmap.js" defer></script>
+
+    <!-- jquery-ui -->
+    <script src="~/plugins/jquery-ui/jquery-ui.js" defer></script>
+    <!-- timePicker -->
+    <script src="~/plugins/timePicker/timePicker." defer></script>
+    <script src="~/js/script.js"></script>
+        </body>

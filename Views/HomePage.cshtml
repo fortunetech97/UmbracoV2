@@ -1,0 +1,68 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = null;
+}
+<!DOCTYPE HTML>
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="@Url.Content("~/css/umbraco-starterkit-style.css")" />
+    
+    <link rel="stylesheet" href="~/LoginPage/style.css" />
+    
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/plugins/bootstrap/bootstrap.min.css">
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="~/plugins/slick/slick.css">
+    <link rel="stylesheet" href="~/plugins/slick/slick-theme.css">
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="~/plugins/fancybox/jquery.fancybox.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="~/plugins/fontawesome/css/all.min.css">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="~/plugins/animation/animate.min.css">
+    <!-- jquery-ui -->
+    <link rel="stylesheet" href="~/plugins/jquery-ui/jquery-ui.css">
+    <!-- timePicker -->
+    <link rel="stylesheet" href="~/plugins/timePicker/timePicker.css">
+
+    <!-- Stylesheets -->
+
+    
+    <link rel="icon" href="~/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="~/images/favicon.png" type="image/x-icon">
+    
+    
+</head>
+	
+<body>
+    
+    
+    <!-- Jumbotron, w title -->
+		
+		
+
+			<div class="row section">
+				<div class="col-md-12">
+
+	            @Model.Value("bodyText")
+
+				</div>				
+			</div>
+
+	
+    <!--End pagewrapper-->
+
+
+</body>
+</html>
